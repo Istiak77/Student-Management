@@ -1,0 +1,25 @@
+{% extends "students/base.html" %}
+
+{% block body %}
+  <h3 class="text-center m-4">Student Details</h3>
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div class="card bg-light mb-3">
+        <div class="card-header">
+          <i class="fa-solid fa-circle-info fa-lg"></i> Student Information
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled">
+            <li><strong>Student Number:</strong> {{ student.student_number }}</li>
+            <li><strong>First Name:</strong> {{ student.first_name }}</li>
+            <li><strong>Last Name:</strong> {{ student.last_name }}</li>
+            <li><strong>Email:</strong> {{ student.email }}</li>
+            <li><strong>Field of Study:</strong> {{ student.field_of_study }}</li>
+            <li><strong>GPA:</strong> {{ student.gpa }}</li>
+          </ul>
+          <a href="{% url 'index' %}" class="btn btn-primary">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
